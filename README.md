@@ -13,7 +13,7 @@
 
 ## Description
 
-  A Ruby library for creating simple external game cheats
+  GHRL (pronounced "girl") is a Ruby library for creating simple external game cheats.
 
 ## Prerequisites
 
