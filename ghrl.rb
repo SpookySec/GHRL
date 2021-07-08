@@ -36,7 +36,7 @@ module GHRL
       WPMInt: Fiddle::Function.new(GHRL_DLL['WPMInt'], [Fiddle::TYPE_VOIDP, Fiddle::TYPE_VOIDP, Fiddle::TYPE_INT],
                                    Fiddle::TYPE_SIZE_T),
       WPMBuf: Fiddle::Function.new(GHRL_DLL['WPMBuf'], [Fiddle::TYPE_VOIDP, Fiddle::TYPE_VOIDP, Fiddle::TYPE_VOIDP, Fiddle::TYPE_INT],
-                                    Fiddle::TYPE_SIZE_T)
+                                   Fiddle::TYPE_SIZE_T)
 
     }
   end
@@ -100,18 +100,14 @@ module GHRL
       case type
       when GHRL::CHAR
         if data.instance_of?(String)
-          if data.length == 1
-            GHRL.functions[:WPMChar].call(@handle, address, data.ord).to_i
-          end
+          GHRL.functions[:WPMChar].call(@handle, address, data.ord).to_i if data.length == 1
         else
           Logger.error('GHRL::CHAR accepts one character')
           nil
         end
 
       when GHRL::INT
-        if data.instance_of?(Integer)
-          GHRL.functions[:WPMInt].call(@handle, address, data).to_i
-        end
+        GHRL.functions[:WPMInt].call(@handle, address, data).to_i if data.instance_of?(Integer)
       when GHRL::STR
         if data.instance_of?(String)
           if data.length == 1
