@@ -109,7 +109,7 @@ Nothing in mind at the moment, maybe if bugs start arising again, I'll have to t
 ## Acknowledgements
 
 Thanks to [@glitch_prog](https://instagram.com/glitch_prog) for the logo.
-Also special thanks to [@cloasies](https://instagram.com/cloasies) for the mental support whiel dealing with C++
+Also special thanks to [@cloasies](https://instagram.com/cloasies) for the mental support while dealing with C++
 
 ## Author
 
